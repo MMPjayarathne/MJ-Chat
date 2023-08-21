@@ -1,16 +1,16 @@
 
 
-const AuthPage = (props) => {
+const Auth = (props) => {
    
     return (
         <div className="background">
             <form className="form-card">
                 <div className="form-title">
-                    Welcome 👋
+                    Welcome 🥰
                 </div>
 
                 <div className="form-subtitle">
-                    Set a username to get started
+                    Set a username to get started on MJ-Chat
                 </div>
 
                 <div className="auth">
@@ -23,4 +23,4 @@ const AuthPage = (props) => {
     );
 }
 
-export default AuthPage
+export default Auth

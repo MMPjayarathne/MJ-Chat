@@ -7,7 +7,7 @@ import Chats from './Chats'
 
 function App() {
 
-  if (!user) {
+  if (!true) {
     return <Auth/>
   } else {
     return <Chats/>
