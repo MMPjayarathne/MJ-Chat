@@ -11,9 +11,9 @@ const [user, setUser] = useState(undefined)
 
 
   if (!user) {
-    return <Auth/>
+    return <Auth onAuth={user => setUser(user)}/>
   } else {
-    return <Chats/>
+    return <Chats user={user}/>
   }
 }
 

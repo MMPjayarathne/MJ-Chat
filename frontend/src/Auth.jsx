@@ -1,10 +1,20 @@
-
+import axios from "axios";
 
 const Auth = (props) => {
-   
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        const { value } = e.target[0];
+        axios.post(
+            'http://localhost:3001/authenticate',
+            { username: value }
+        )
+        props.onAuth({username:value, secret:value})
+    }
+
     return (
         <div className="background">
-            <form className="form-card">
+            <form onSubmit={onSubmit} className="form-card">
                 <div className="form-title">
                     Welcome 🥰
                 </div>
