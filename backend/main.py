@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from pydantic import BaseModel
 
+import requests
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -12,9 +14,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+PRIVATE_KEY = "bd3e3897-f40e-4bb8-bb69-0f7404b38555"
+
 class User(BaseModel):
     username: str
 
+
 @app.post('/authenticate')
 async def authenticate(user: User):
-    return {}
+    response = requests.put('https://api.chatengine.io/users/',
+        data={
+            "username": user.username,
+            "secret": user.username,
+            "first_name": user.username,
+        },
+        headers={ "Private-Key": PRIVATE_KEY }
+    )
+    return response.json()

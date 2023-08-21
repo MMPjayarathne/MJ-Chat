@@ -7,7 +7,10 @@ import Chats from './Chats'
 
 function App() {
 
-  if (!true) {
+const [user, setUser] = useState(undefined)
+
+
+  if (!user) {
     return <Auth/>
   } else {
     return <Chats/>
