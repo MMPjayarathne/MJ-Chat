@@ -2,16 +2,15 @@ import { useState } from 'react'
 
 import './styles/App.css'
 
-import AuthPage from './AuthPage'
-import ChatsPage from './ChatsPage'
+import Auth from './Auth'
+import Chats from './Chats'
 
 function App() {
- 
 
   if (!user) {
-    return <AuthPage />
+    return <Auth/>
   } else {
-    return <ChatsPage  />
+    return <Chats/>
   }
 }
 
