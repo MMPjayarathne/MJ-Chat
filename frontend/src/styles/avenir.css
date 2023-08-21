@@ -1,0 +1,14 @@
+/* avenir.css */
+@font-face {
+    font-family: 'Avenir';
+    src: url('../assets/avenir/AvenirLTStd-Black.otf') format('otf'),
+         url('../assets/avenir/AvenirLTStd-Book.otf') format('otf'),
+         url('../assets/avenir/AvenirLTStd-Roman.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .avenir-font {
+    font-family: 'Avenir', sans-serif;
+  }
+  
