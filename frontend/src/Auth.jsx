@@ -1,12 +1,12 @@
 import axios from "axios";
-
+const BASE_URL =  import.meta.env.BASE_URL;
 const Auth = (props) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
         const { value } = e.target[0];
         axios.post(
-            'http://localhost:3001/authenticate',
+            `${BASE_URL}/authenticate`,
             { username: value }
         )
         props.onAuth({username:value, secret:value})
